@@ -1,0 +1,15 @@
+D:\Everything Else\1 - TAFE\Diploma - Software Development\BIT\BITServices\BITServices\bin\Debug\BITServices.exe.config
+D:\Everything Else\1 - TAFE\Diploma - Software Development\BIT\BITServices\BITServices\bin\Debug\BITServices.exe
+D:\Everything Else\1 - TAFE\Diploma - Software Development\BIT\BITServices\BITServices\bin\Debug\BITServices.pdb
+D:\Everything Else\1 - TAFE\Diploma - Software Development\BIT\BITServices\BITServices\obj\Debug\BITServices.csprojAssemblyReference.cache
+D:\Everything Else\1 - TAFE\Diploma - Software Development\BIT\BITServices\BITServices\obj\Debug\MainWindow.g.cs
+D:\Everything Else\1 - TAFE\Diploma - Software Development\BIT\BITServices\BITServices\obj\Debug\App.g.cs
+D:\Everything Else\1 - TAFE\Diploma - Software Development\BIT\BITServices\BITServices\obj\Debug\BITServices_MarkupCompile.cache
+D:\Everything Else\1 - TAFE\Diploma - Software Development\BIT\BITServices\BITServices\obj\Debug\BITServices_MarkupCompile.lref
+D:\Everything Else\1 - TAFE\Diploma - Software Development\BIT\BITServices\BITServices\obj\Debug\MainWindow.baml
+D:\Everything Else\1 - TAFE\Diploma - Software Development\BIT\BITServices\BITServices\obj\Debug\BITServices.g.resources
+D:\Everything Else\1 - TAFE\Diploma - Software Development\BIT\BITServices\BITServices\obj\Debug\BITServices.Properties.Resources.resources
+D:\Everything Else\1 - TAFE\Diploma - Software Development\BIT\BITServices\BITServices\obj\Debug\BITServices.csproj.GenerateResource.cache
+D:\Everything Else\1 - TAFE\Diploma - Software Development\BIT\BITServices\BITServices\obj\Debug\BITServices.csproj.CoreCompileInputs.cache
+D:\Everything Else\1 - TAFE\Diploma - Software Development\BIT\BITServices\BITServices\obj\Debug\BITServices.exe
+D:\Everything Else\1 - TAFE\Diploma - Software Development\BIT\BITServices\BITServices\obj\Debug\BITServices.pdb
