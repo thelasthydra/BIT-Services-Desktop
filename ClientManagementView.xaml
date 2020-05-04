@@ -17,7 +17,11 @@
 
         <Label Content="Client Management" Style="{StaticResource headerLbl}"/>
 
-        <StackPanel  Grid.Row="1" Margin="5">
+        <Grid  Grid.Row="1" Margin="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
             <Grid Margin="0 5 0 5">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="auto"/>
@@ -42,9 +46,8 @@
                 </StackPanel>
 
             </Grid>
-            <Grid>
-            <DataGrid x:Name="dgClient" ItemsSource="{Binding Clients}" SelectedItem="{Binding SelectedClient}" 
-                      Style="{StaticResource DataGrid}" ColumnHeaderStyle="{StaticResource DataGridHeader}" VerticalAlignment="Stretch">
+            <DataGrid x:Name="dgClient" ItemsSource="{Binding Clients}" SelectedItem="{Binding SelectedClient}" Grid.Row="1"
+                      Style="{StaticResource DataGrid}" ColumnHeaderStyle="{StaticResource DataGridHeader}">
 
                 <DataGrid.Columns>
                     <DataGridTextColumn Binding="{Binding CompanyName}" Header="Company Name"/>
@@ -54,17 +57,16 @@
                     <DataGridTextColumn Binding="{Binding HeadOffice}" Header="Head Office"/>
                 </DataGrid.Columns>
             </DataGrid>
-            </Grid>
-        </StackPanel>
+        </Grid>
 
         <Grid Grid.Row="2">
             <StackPanel>
 
-                <Grid MaxWidth="1500">
+                <Grid Style="{StaticResource MaxWidth}">
                     <Label Content="Client Details" Style="{StaticResource formHeader}"/>
                 </Grid>
 
-                <Grid MaxWidth="1500">
+                <Grid Style="{StaticResource MaxWidth}">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
                         <ColumnDefinition/>
@@ -81,7 +83,7 @@
                         </ItemsControl>
                         <ItemsControl Style="{StaticResource 2Column}">
                             <Button Content="Manage Locations" Style="{StaticResource formBtn}"
-                                    Grid.Column="1"/>
+                                    Grid.Column="1" Click="ManageLocations"/>
                         </ItemsControl>
                     </StackPanel>
 
@@ -102,7 +104,7 @@
 
                 </Grid>
 
-                <Grid MaxWidth="1000">
+                <Grid Style="{StaticResource MaxWidth}">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>

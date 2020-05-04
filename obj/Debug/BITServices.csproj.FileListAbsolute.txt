@@ -18,3 +18,5 @@ D:\Everything Else\1 - TAFE\Diploma - Software Development\BIT\BITServices\BITSe
 D:\Everything Else\1 - TAFE\Diploma - Software Development\BIT\BITServices\BITServices\obj\Debug\ClientManagementView.baml
 D:\Everything Else\1 - TAFE\Diploma - Software Development\BIT\BITServices\BITServices\obj\Debug\NewClientView.g.cs
 D:\Everything Else\1 - TAFE\Diploma - Software Development\BIT\BITServices\BITServices\obj\Debug\NewClientView.baml
+D:\Everything Else\1 - TAFE\Diploma - Software Development\BIT\BITServices\BITServices\obj\Debug\LocationManagementView.g.cs
+D:\Everything Else\1 - TAFE\Diploma - Software Development\BIT\BITServices\BITServices\obj\Debug\LocationManagementView.baml

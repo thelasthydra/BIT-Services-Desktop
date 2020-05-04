@@ -16,23 +16,19 @@ using System.Windows.Shapes;
 namespace BITServices
 {
     /// <summary>
-    /// Interaction logic for ClientManagementView.xaml
+    /// Interaction logic for LocationManagementView.xaml
     /// </summary>
-    public partial class ClientManagementView : Page
+    public partial class LocationManagementView : Page
     {
-        public ClientManagementView()
+        public LocationManagementView()
         {
             InitializeComponent();
         }
 
-        private void NewClient(object sender, RoutedEventArgs e)
+        public LocationManagementView(string companyName)
         {
-            this.NavigationService.Navigate(new Uri("NewClientView.xaml", UriKind.Relative));
-        }
-
-        private void ManageLocations(object sender, RoutedEventArgs e)
-        {
-            this.NavigationService.Navigate(new Uri("LocationManagementView.xaml", UriKind.Relative));
+            InitializeComponent();
+            lblTitle.Content = companyName + " Location Management";
         }
     }
 }
