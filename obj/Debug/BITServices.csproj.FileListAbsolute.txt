@@ -13,3 +13,8 @@ D:\Everything Else\1 - TAFE\Diploma - Software Development\BIT\BITServices\BITSe
 D:\Everything Else\1 - TAFE\Diploma - Software Development\BIT\BITServices\BITServices\obj\Debug\BITServices.csproj.CoreCompileInputs.cache
 D:\Everything Else\1 - TAFE\Diploma - Software Development\BIT\BITServices\BITServices\obj\Debug\BITServices.exe
 D:\Everything Else\1 - TAFE\Diploma - Software Development\BIT\BITServices\BITServices\obj\Debug\BITServices.pdb
+D:\Everything Else\1 - TAFE\Diploma - Software Development\BIT\BITServices\BITServices\obj\Debug\App.baml
+D:\Everything Else\1 - TAFE\Diploma - Software Development\BIT\BITServices\BITServices\obj\Debug\ClientManagementView.g.cs
+D:\Everything Else\1 - TAFE\Diploma - Software Development\BIT\BITServices\BITServices\obj\Debug\ClientManagementView.baml
+D:\Everything Else\1 - TAFE\Diploma - Software Development\BIT\BITServices\BITServices\obj\Debug\NewClientView.g.cs
+D:\Everything Else\1 - TAFE\Diploma - Software Development\BIT\BITServices\BITServices\obj\Debug\NewClientView.baml

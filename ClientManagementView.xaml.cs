@@ -16,24 +16,18 @@ using System.Windows.Shapes;
 namespace BITServices
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for ClientManagementView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ClientManagementView : Page
     {
-        public MainWindow()
+        public ClientManagementView()
         {
             InitializeComponent();
-            //Style = (Style)FindResource(typeof(Window));
         }
 
-        private void BtnClient_Click(object sender, RoutedEventArgs e)
+        private void NewClient(object sender, RoutedEventArgs e)
         {
-            content.Content = new ClientManagementView();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            content.Content = null;
+            this.NavigationService.Navigate(new Uri("NewClientView.xaml", UriKind.Relative));
         }
     }
 }

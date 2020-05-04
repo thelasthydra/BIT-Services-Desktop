@@ -5,8 +5,66 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BITServices"
         mc:Ignorable="d"
-        Title="BIT Services" Height="1080" Width="1920" WindowState="Maximized" WindowStartupLocation="CenterScreen">
-    <Grid>
-        
+        Title="BIT Services" Height="1080" Width="1920" WindowStartupLocation="CenterScreen" Style="{StaticResource Window}">
+    <Grid Margin="5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Button Background="Transparent" BorderThickness="0" BorderBrush="Transparent" Click="Button_Click">
+            <Image x:Name="imgLogo" Source="Resources/logo.png"
+                   Cursor="Hand"/>
+        </Button>
+
+        <Label Content="Business Information Technology Services" FontSize="40" FontFamily="Source Code Pro"
+               Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+
+        <Grid Grid.Row="1" Margin="0 5 0 0" Background="#079fe6">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <StackPanel>
+                <!--Admin Buttons-->
+                <Button x:Name="btnClient"
+                        Style="{StaticResource navBtn}" BorderThickness="0 1 0 1" Click="BtnClient_Click"> 
+                        <TextBlock TextWrapping="Wrap">Client <LineBreak/> Management</TextBlock>
+                </Button>
+                <Button x:Name="btnCoordinator"
+                        Style="{StaticResource navBtn}">
+                        <TextBlock>Coordinator Management</TextBlock>
+                </Button>
+                <Button x:Name="btnCoordinatorRoster"
+                        Style="{StaticResource navBtn}">
+                        <TextBlock>Coordinator Roster</TextBlock>
+                </Button>
+                <!--Universal Buttons-->
+                <Button x:Name="btnContractor"
+                        Style="{StaticResource navBtn}">
+                        <TextBlock TextWrapping="Wrap">Contractor Management</TextBlock>
+                </Button>
+                <Button x:Name="btnCreateJobs"
+                        Style="{StaticResource navBtn}">
+                        <TextBlock>Create Job</TextBlock>
+                </Button>
+                <Button x:Name="btnAssignJob"
+                        Style="{StaticResource navBtn}">
+                    <TextBlock>Assign Job</TextBlock>
+                </Button>
+            </StackPanel>
+            <Button x:Name="btnLogout" Grid.Row="1"
+                        Style="{StaticResource navBtn}">
+                <TextBlock>Logout</TextBlock>
+            </Button>
+        </Grid>
+        <Frame x:Name="content" Margin="5 5 0 0"
+               Grid.Column="1" Grid.Row="1"
+               NavigationUIVisibility="Hidden"/>
+            <!--Width="1745" Height="930"-->
     </Grid>
 </Window>
