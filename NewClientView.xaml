@@ -84,5 +84,9 @@
 
         </StackPanel>
 
+        <Button x:Name="btnBack" Style="{StaticResource backBtn}" Grid.Row="1" Click="Back">
+            <Image Source="Resources/back.png"/>
+        </Button>
+        
     </Grid>
 </Page>

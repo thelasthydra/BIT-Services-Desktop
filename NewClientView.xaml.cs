@@ -23,7 +23,11 @@ namespace BITServices
         public NewClientView()
         {
             InitializeComponent();
-            txtCompanyName.Focus();
+        }
+
+        private void Back(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("ClientManagementView.xaml", UriKind.Relative));
         }
     }
 }

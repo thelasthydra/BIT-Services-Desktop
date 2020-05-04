@@ -31,9 +31,10 @@
                         FontSize="14"/>
                 </StackPanel>
             </ItemsControl>
-            <DataGrid ItemsSource="{Binding ClientLocations}" SelectedItem="{Binding SelectedClient}" 
+            <DataGrid ItemsSource="{Binding ClientLocations}" SelectedItem="{Binding SelectedClientLocation}" Grid.Row="1"
                       Style="{StaticResource DataGrid}" ColumnHeaderStyle="{StaticResource DataGridHeader}">
                 <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding LocationID}" Header="Location ID" Visibility="Hidden"/>
                     <DataGridTextColumn Binding="{Binding Address}" Header="Address"/>
                     <DataGridTextColumn Binding="{Binding Suburb}" Header="Suburb"/>
                     <DataGridTextColumn Binding="{Binding Postcode}" Header="Postcode"/>
@@ -43,10 +44,53 @@
             </DataGrid>
         </ItemsControl>
 
-        <ItemsControl Style="{StaticResource 5050Column}" MaxWidth="1500" Grid.Row="2">
-            <Label Content="Location Details" Style="{StaticResource formHeader}"/>
-            
-        </ItemsControl>
-        
+        <Grid Style="{StaticResource MaxWidth}" Grid.Row="2">
+            <StackPanel>
+                <Label Content="Location Details" Style="{StaticResource formHeader}"/>
+
+                <ItemsControl Style="{StaticResource 5050Column}">
+                    <StackPanel>
+                        <ItemsControl Style="{StaticResource 2Column}">
+                            <Label Content="Address:" Style="{StaticResource formLbl}"/>
+                            <TextBox Text="{Binding SelectedClientLocation.Address, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Style="{StaticResource formInput}"/>
+                        </ItemsControl>
+                        <ItemsControl Style="{StaticResource 2Column}">
+                            <Label Content="Suburb:" Style="{StaticResource formLbl}"/>
+                            <TextBox Text="{Binding SelectedClientLocation.Suburb, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Style="{StaticResource formInput}"/>
+                        </ItemsControl>
+                        <ItemsControl Style="{StaticResource 2Column}">
+                            <Label Content="Postcode:" Style="{StaticResource formLbl}"/>
+                            <TextBox Text="{Binding SelectedClientLocation.Postcode, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Style="{StaticResource formInput}"/>
+                        </ItemsControl>
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="1">
+                        <ItemsControl Style="{StaticResource 2Column}">
+                            <Label Content="State:" Style="{StaticResource formLbl}"/>
+                            <TextBox Text="{Binding SelectedClientLocation.State, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Style="{StaticResource formInput}"/>
+                        </ItemsControl>
+                        <ItemsControl Style="{StaticResource 2Column}">
+                            <Label Content="Country:" Style="{StaticResource formLbl}"/>
+                            <TextBox Text="{Binding SelectedClientLocation.Country, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Style="{StaticResource formInput}"/>
+                        </ItemsControl>
+                    </StackPanel>
+                </ItemsControl>
+
+                <ItemsControl Style="{StaticResource 5050Column}">
+                    <Button Content="Update Location" Style="{StaticResource formMainBtn}"/>
+                    <ItemsControl Style="{StaticResource 5050Column}" Grid.Column="1">
+                        <Button Content="Add Location" Style="{StaticResource formMainBtn}"/>
+                        <Button Content="Delete Selected Location" Style="{StaticResource formMainBtn}" Grid.Column="1"/>
+                    </ItemsControl>
+                </ItemsControl>
+
+            </StackPanel>
+
+        </Grid>
+
+        <Button x:Name="btnBack" Style="{StaticResource backBtn}" VerticalAlignment="Bottom" Grid.Row="2" Click="Back">
+            <Image Source="Resources/back.png"/>
+        </Button>
+
     </Grid>
 </Page>

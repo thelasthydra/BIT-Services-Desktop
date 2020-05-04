@@ -42,7 +42,7 @@
             <Setter Property="ItemsPanel">
                 <Setter.Value>
                     <ItemsPanelTemplate>
-                        <Grid>
+                        <Grid Margin="0 5">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="2*"/>
                                 <ColumnDefinition Width="3*"/>
@@ -87,7 +87,7 @@
             <Setter Property="ItemsPanel">
                 <Setter.Value>
                     <ItemsPanelTemplate>
-                        <Grid>
+                        <Grid Margin="0 0 0 5">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="auto"/>
                                 <ColumnDefinition Width="*"/>
@@ -127,10 +127,19 @@
             <Setter Property="VerticalContentAlignment" Value="Center"/>
         </Style>
 
+            <Style x:Key="backBtn" TargetType="Button" BasedOn="{StaticResource addBtn}">
+                <Setter Property="Height" Value="35"/>
+                <Setter Property="Width" Value="35"/>
+                <Setter Property="HorizontalAlignment" Value="Left"/>
+                <Setter Property="VerticalAlignment" Value="Bottom"/>
+                <Setter Property="Margin" Value="5"/>
+            </Style>
+
         <Style x:Key="formLbl" TargetType="Label">
             <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
             <Setter Property="FontSize" Value="15"/>
-            <Setter Property="Margin" Value="0 10 5 0"/>
+            <Setter Property="Margin" Value="0 0 5 0"/>
             <Setter Property="Padding" Value="1"/>
         </Style>
 

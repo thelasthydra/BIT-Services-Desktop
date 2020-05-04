@@ -30,5 +30,10 @@ namespace BITServices
             InitializeComponent();
             lblTitle.Content = companyName + " Location Management";
         }
+
+        private void Back(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("ClientManagementView.xaml", UriKind.Relative));
+        }
     }
 }
