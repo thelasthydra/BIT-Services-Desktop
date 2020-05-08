@@ -39,7 +39,6 @@
                     <DataGridTextColumn Binding="{Binding Suburb}" Header="Suburb"/>
                     <DataGridTextColumn Binding="{Binding Postcode}" Header="Postcode"/>
                     <DataGridTextColumn Binding="{Binding State}" Header="State"/>
-                    <DataGridTextColumn Binding="{Binding Country}" Header="Country"/>
                 </DataGrid.Columns>
             </DataGrid>
         </ItemsControl>
@@ -58,20 +57,26 @@
                             <Label Content="Suburb:" Style="{StaticResource formLbl}"/>
                             <TextBox Text="{Binding SelectedClientLocation.Suburb, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Style="{StaticResource formInput}"/>
                         </ItemsControl>
-                        <ItemsControl Style="{StaticResource 2Column}">
-                            <Label Content="Postcode:" Style="{StaticResource formLbl}"/>
-                            <TextBox Text="{Binding SelectedClientLocation.Postcode, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Style="{StaticResource formInput}"/>
-                        </ItemsControl>
                     </StackPanel>
 
                     <StackPanel Grid.Column="1">
                         <ItemsControl Style="{StaticResource 2Column}">
                             <Label Content="State:" Style="{StaticResource formLbl}"/>
-                            <TextBox Text="{Binding SelectedClientLocation.State, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Style="{StaticResource formInput}"/>
+                            <!--<TextBox Text="{Binding SelectedClientLocation.State, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Style="{StaticResource formInput}"/>-->
+                            <ComboBox Name="cmboState" Style="{StaticResource formDropdown}">
+                                <ComboBoxItem Content="Queensland"/>
+                                <ComboBoxItem Content="New South Wales"/>
+                                <ComboBoxItem Content="Victoria"/>
+                                <ComboBoxItem Content="Australian Capital Territory"/>
+                                <ComboBoxItem Content="South Australia"/>
+                                <ComboBoxItem Content="Western Australia"/>
+                                <ComboBoxItem Content="Northern Territory"/>
+                                <ComboBoxItem Content="Tasmania"/>
+                            </ComboBox>
                         </ItemsControl>
                         <ItemsControl Style="{StaticResource 2Column}">
-                            <Label Content="Country:" Style="{StaticResource formLbl}"/>
-                            <TextBox Text="{Binding SelectedClientLocation.Country, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Style="{StaticResource formInput}"/>
+                            <Label Content="Postcode:" Style="{StaticResource formLbl}"/>
+                            <TextBox Text="{Binding SelectedClientLocation.Postcode, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Style="{StaticResource formInput}"/>
                         </ItemsControl>
                     </StackPanel>
                 </ItemsControl>

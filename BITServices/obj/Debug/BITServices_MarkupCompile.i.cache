@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\toast\Documents\GitHub\BITServices\obj\Debug\
+C:\Users\toast\Documents\GitHub\BITServices\BITServices\obj\Debug\
 BITServices
 none
 false
 DEBUG;TRACE
-C:\Users\toast\Documents\GitHub\BITServices\App.xaml
-4884630020
+C:\Users\toast\Documents\GitHub\BITServices\BITServices\App.xaml
+4-1982028275
 
-9-877161748
+12570277828
 13-1505183044
-ClientManagementView.xaml;LocationManagementView.xaml;MainWindow.xaml;NewClientView.xaml;
+Views\ClientManagementView.xaml;Views\LocationManagementView.xaml;MainWindow.xaml;Views\NewClientView.xaml;
 
-True
+False
 
