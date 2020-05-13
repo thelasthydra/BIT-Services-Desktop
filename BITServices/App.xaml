@@ -4,10 +4,7 @@
              xmlns:local="clr-namespace:BITServices"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-
-        <!-- Font Family -->
-        <!-- <Setter Property="FontFamily" Value="Source Code Pro"/> -->
-
+       
         <Style x:Key="Window" TargetType="Window">
             <Setter Property="WindowState" Value="Maximized"/>
             <Setter Property="Icon" Value="Resources/logo.png"/>
@@ -62,7 +59,7 @@
             <Setter Property="ItemsPanel">
                 <Setter.Value>
                     <ItemsPanelTemplate>
-                        <Grid>
+                        <Grid MaxWidth="1000">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="*"/>
@@ -106,6 +103,7 @@
 
         <Style x:Key="navBtn" TargetType="Button">
             <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="White"/>
             <Setter Property="BorderThickness" Value="0 0 0 1"/>
             <Setter Property="BorderBrush" Value="#4a4a4a"/>
             <Setter Property="FontSize" Value="18"/>

@@ -1,0 +1,56 @@
+﻿<Page x:Class="BITServices.Views.Client.NewLocationView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:BITServices.Views.Client"
+      mc:Ignorable="d" 
+      d:DesignHeight="930" d:DesignWidth="1745"
+      Title="NewLocationView">
+
+    <Grid Style="{StaticResource Page}">
+        <StackPanel>
+            <Label Content="New Office Details" Style="{StaticResource headerLbl}"/>
+            <ItemsControl Style="{StaticResource 5050Column}" MaxWidth="1000">
+                <StackPanel>
+                    <ItemsControl Style="{StaticResource 2Column}">
+                        <Label Content="Address:" Style="{StaticResource formLbl}"/>
+                        <TextBox Text="{Binding Location.Address, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource formInput}"
+                                     TabIndex="2"/>
+                    </ItemsControl>
+                    <ItemsControl Style="{StaticResource 2Column}">
+                        <Label Content="Suburb:" Style="{StaticResource formLbl}"/>
+                        <TextBox Text="{Binding Location.Suburb, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource formInput}"
+                                     TabIndex="4"/>
+                    </ItemsControl>
+                </StackPanel>
+                <StackPanel Grid.Column="1">
+                    <ItemsControl Style="{StaticResource 2Column}">
+                        <Label Content="Postcode:" Style="{StaticResource formLbl}"/>
+                        <TextBox Text="{Binding Location.Postcode, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource formInput}"
+                                 TabIndex="3"/>
+                    </ItemsControl>
+                    <ItemsControl Style="{StaticResource 2Column}">
+                        <Label Content="State:" Style="{StaticResource formLbl}"/>
+                        <ComboBox SelectedItem="{Binding Location.State, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource formDropdown}" TabIndex="5">
+                            <ComboBoxItem Content="Queensland"/>
+                            <ComboBoxItem Content="New South Wales"/>
+                            <ComboBoxItem Content="Victoria"/>
+                            <ComboBoxItem Content="Australian Capital Territory"/>
+                            <ComboBoxItem Content="South Australia"/>
+                            <ComboBoxItem Content="Western Australia"/>
+                            <ComboBoxItem Content="Northern Territory"/>
+                            <ComboBoxItem Content="Tasmania"/>
+                        </ComboBox>
+                    </ItemsControl>
+                </StackPanel>
+            </ItemsControl>
+            <Button Content="Add Location" Style="{StaticResource formMainBtn}" Margin="0 15 0 0" Width="250" TabIndex="11"/>
+        </StackPanel>
+
+        <Button x:Name="btnBack" Style="{StaticResource backBtn}" VerticalAlignment="Bottom" Click="Back">
+            <Image Source="../../Resources/back.png"/>
+        </Button>
+
+    </Grid>
+</Page>

@@ -1,0 +1,100 @@
+﻿<Page x:Class="BITServices.Views.Client.StaffManagementView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:BITServices.Views.Client"
+      mc:Ignorable="d" 
+      d:DesignHeight="930" d:DesignWidth="1745"
+      Title="StaffManagementView">
+
+    <Grid Style="{StaticResource Page}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Label x:Name="lblTitle" Content="Staff Management" Style="{StaticResource headerLbl}"/>
+
+        <ItemsControl Style="{StaticResource DGRow}" Grid.Row="1">
+            <ItemsControl Style="{StaticResource DGRow2}">
+                <Button Style="{StaticResource addBtn}">
+                    <Image Source="../../Resources/plus.png"/>
+                </Button>
+
+                <StackPanel Orientation="Horizontal" Grid.Column="2" VerticalAlignment="Center">
+                    <TextBox Text="Search Here" Width="250" Height="25" 
+                         FontSize="14"
+                         TextAlignment="Center" VerticalContentAlignment="Center"/>
+                    <Button Content="Search" Width="75" Height="25"
+                        FontSize="14"/>
+                </StackPanel>
+            </ItemsControl>
+            <DataGrid ItemsSource="{Binding ClientStaff}" SelectedItem="{Binding SelectedClientStaff}" Grid.Row="1"
+                      Style="{StaticResource DataGrid}" ColumnHeaderStyle="{StaticResource DataGridHeader}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding FirstName}" Header="First Name"/>
+                    <DataGridTextColumn Binding="{Binding LastName}" Header="Last Name"/>
+                    <DataGridTextColumn Binding="{Binding StaffID}" Visibility="Hidden"/>
+                    <DataGridTextColumn Binding="{Binding Email}" Header="Email"/>
+                    <DataGridTextColumn Binding="{Binding Password}" Visibility="Hidden"/>
+                    <DataGridTextColumn Binding="{Binding CompanyName}" Header="Company" Visibility="Hidden" x:Name="thCompanyName"/>
+                    <DataGridTextColumn Binding="{Binding LocationID}" Visibility="Hidden"/>
+                    <DataGridTextColumn Binding="{Binding LocationSuburb}" Header="Office"/>
+                    <DataGridTextColumn Binding="{Binding Phone}" Header="Phone Number"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </ItemsControl>
+
+        <Grid Style="{StaticResource MaxWidth}" Grid.Row="2">
+            <StackPanel>
+                <Label Content="Staff Details" Style="{StaticResource formHeader}"/>
+                <ItemsControl Style="{StaticResource 5050Column}">
+                    <StackPanel>
+                        <ItemsControl Style="{StaticResource 2Column}">
+                            <Label Content="First Name:" Style="{StaticResource formLbl}"/>
+                            <TextBox Text="{Binding SelectedClientStaff.FirstName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource formInput}"/>
+                        </ItemsControl>
+                        <ItemsControl Style="{StaticResource 2Column}">
+                            <Label Content="Email:" Style="{StaticResource formLbl}"/>
+                            <TextBox Text="{Binding SelectedClientStaff.Email, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource formInput}"/>
+                        </ItemsControl>
+                        <ItemsControl Style="{StaticResource 2Column}">
+                            <Label Content="Password:" Style="{StaticResource formLbl}"/>
+                            <TextBox Text="{Binding SelectedClientStaff.Password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource formInput}"/>
+                        </ItemsControl>
+                    </StackPanel>
+                    <StackPanel Grid.Column="1">
+                        <ItemsControl Style="{StaticResource 2Column}">
+                            <Label Content="Last Name:" Style="{StaticResource formLbl}"/>
+                            <TextBox Text="{Binding SelectedClientStaff.LastName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource formInput}"/>
+                        </ItemsControl>
+                        <ItemsControl Style="{StaticResource 2Column}">
+                            <Label Content="Phone Number:" Style="{StaticResource formLbl}"/>
+                            <TextBox Text="{Binding SelectedClientStaff.Phone, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource formInput}"/>
+                        </ItemsControl>
+                        <ItemsControl Style="{StaticResource 2Column}">
+                            <Label Content="Office:" Style="{StaticResource formLbl}"/>
+                            <ComboBox ItemsSource="{Binding Offices}" SelectedItem="{Binding SelectedClientStaff.LocationSuburb, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource formDropdown}"/>
+                        </ItemsControl>
+                    </StackPanel>
+                </ItemsControl>
+                
+                <ItemsControl Style="{StaticResource 5050Column}">
+                    <ItemsControl Style="{StaticResource 5050Column}">
+                        <Button Content="Add Staff" Style="{StaticResource formMainBtn}"/>
+                        <Button Content="Delete Selected Staff" Style="{StaticResource formMainBtn}" Grid.Column="1"/>
+                    </ItemsControl>
+                    <Button Content="Update Staff" Style="{StaticResource formMainBtn}" Grid.Column="1"/>
+                </ItemsControl>
+                
+            </StackPanel>
+        </Grid>
+
+        <Button x:Name="btnBack" Style="{StaticResource backBtn}" VerticalAlignment="Bottom" Grid.Row="2" Click="Back">
+            <Image Source="../../Resources/back.png"/>
+        </Button>
+        
+    </Grid>
+</Page>

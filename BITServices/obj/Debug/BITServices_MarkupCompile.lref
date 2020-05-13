@@ -1,7 +1,10 @@
 ﻿
 FC:\Users\toast\Documents\GitHub\BITServices\BITServices\App.xaml;;
-FC:\Users\toast\Documents\GitHub\BITServices\BITServices\ClientManagementView.xaml;;
-FC:\Users\toast\Documents\GitHub\BITServices\BITServices\LocationManagementView.xaml;;
+FC:\Users\toast\Documents\GitHub\BITServices\BITServices\Views\Client\ClientManagementView.xaml;;
+FC:\Users\toast\Documents\GitHub\BITServices\BITServices\Views\Client\LocationManagementView.xaml;;
 FC:\Users\toast\Documents\GitHub\BITServices\BITServices\MainWindow.xaml;;
-FC:\Users\toast\Documents\GitHub\BITServices\BITServices\NewClientView.xaml;;
+FC:\Users\toast\Documents\GitHub\BITServices\BITServices\Views\Client\NewClientView.xaml;;
+FC:\Users\toast\Documents\GitHub\BITServices\BITServices\Views\Client\NewLocationView.xaml;;
+FC:\Users\toast\Documents\GitHub\BITServices\BITServices\Views\Client\NewStaffView.xaml;;
+FC:\Users\toast\Documents\GitHub\BITServices\BITServices\Views\Client\StaffManagementView.xaml;;
 

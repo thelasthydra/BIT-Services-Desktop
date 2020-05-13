@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\toast\Documents\GitHub\BITServices\BITServices\App.xaml
-4884630020
+7417632767
 
-8-1504211222
+162015592796
 13-1505183044
-ClientManagementView.xaml;LocationManagementView.xaml;MainWindow.xaml;NewClientView.xaml;
+Views\Client\ClientManagementView.xaml;Views\Client\LocationManagementView.xaml;MainWindow.xaml;Views\Client\NewClientView.xaml;Views\Client\NewLocationView.xaml;Views\Client\NewStaffView.xaml;Views\Client\StaffManagementView.xaml;
 
-False
+True
 

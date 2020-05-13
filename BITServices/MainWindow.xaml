@@ -58,7 +58,7 @@
                 </Button>
             </StackPanel>
             <Button x:Name="btnLogout" Grid.Row="1"
-                        Style="{StaticResource navBtn}">
+                        Style="{StaticResource navBtn}" BorderBrush="Transparent">
                 <TextBlock>Logout</TextBlock>
             </Button>
         </Grid>
